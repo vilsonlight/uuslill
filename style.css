@@ -219,8 +219,9 @@ h2 {
 
 /* Slaideri konteiner */
 .slider-container {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
   border-radius: 1rem;

@@ -1,0 +1,417 @@
+:root {
+  --base-color: white;
+  --text-color: black;
+  --primary-color: red;
+  --secondary-color: blue;
+  --color-1: yellow;
+  --coloer-2: brown;
+  --color-3: green;
+  --color-4: rgb(236, 190, 190);
+  --color-5: rgb(235, 232, 232);
+  --section-bg: url("images/slider2.webp");
+  --section-bg-1: url("images/salider ääred 2.webp");
+  --section-bg-2: url("images/o .webp");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Playfair Display", serif;
+  color: var(--text-color);
+}
+
+body {
+  padding: 1em;
+  background-color: var(--base-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+/* header video */
+
+/* HEADER KONTEINER JA VIDEO */
+.hero-header {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9; /* hoiab 16:9 proportsiooni */
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* video täidab kasti, kärbib vajadusel üle */
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* TEKST KESKEL */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4); /* veidi läbipaistev taust */
+  padding: 1em 2em;
+  border-radius: 0.5em;
+}
+
+.hero-text h1 {
+  margin: 0 0 0.5em 0;
+  font-size: 2rem;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+nav {
+  position: fixed;
+  top: 0; /* alguses ülaserv */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000; /* peab olema suurem kui video */
+  background: rgba(255, 255, 255, 0.8); /* natuke läbipaistvat tausta */
+  padding: 1em 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: 300; /* õrnem kiri */
+  font-size: 0.9rem; /* väiksem kiri */
+  letter-spacing: 0.5px; /* veidi õhulisem */
+}
+
+/*
+
+nav ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-weight:bold ;
+}
+
+*/
+
+nav a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.logo-link img {
+  height: 30px; /* muuda vastavalt */
+  width: auto;
+  display: block;
+}
+
+/* MOBIILIS */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+.text-container {
+  flex: 0 1 34em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.text-container p {
+  margin: 0.75em 0 1em 0;
+  font-size: 1.25rem;
+}
+
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+
+  background-color: rgba(255, 255, 255, 0.6); /* läbipaistev hele */
+  backdrop-filter: blur(6px); /* teeb “glass” efekti */
+
+  padding: 0.75em 1.25em;
+  border-radius: 0.5em;
+  font-weight: 700;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.25s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+section {
+  margin: 2em auto;
+  width: min(75em, 100%);
+  background-image: var(--section-bg-2);
+  /* background-color: var(--color-5); */
+  padding: min(2em, 15%);
+  border-radius: 1em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* proov*/
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Slaideri konteiner */
+.slider-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 1rem;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* tooted */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-box {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.product-box {
+  overflow: hidden; /* oluline, et zoom ei läheks kastist välja */
+}
+
+.product-box img:hover {
+  transform: scale(1.1);
+}
+
+.product-box h3 {
+  margin: 10px 0 5px 0;
+  font-family: "Playfair Display", serif;
+}
+
+.product-box p {
+  font-size: 0.9rem;
+  font-family: "Playfair Display", serif;
+}
+
+@media (max-width: 800px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tellimise box */
+
+.order-form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+.order-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-form input,
+.order-form textarea,
+.order-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.order-form button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.order-form button:hover {
+  background: #333;
+}
+
+/* map box */
+
+.map-section {
+  padding: 80px 20px;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+}
+
+.map-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.map-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.map-info p {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.map-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.map-button:hover {
+  background: #444;
+}
+
+/* mobiil */
+@media (max-width: 900px) {
+  .map-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+details {
+  margin-bottom: 1em;
+  background-color: var(--color-5);
+  border-radius: 1em;
+  text-align: center;
+}
+
+details summary {
+  padding: 1em;
+  font-size: 1, 7rem;
+  font-family: "Playfair Display", serif;
+}
+
+details p {
+  padding: 0 2em 2em 2em;
+}

@@ -445,3 +445,35 @@ details summary {
 details p {
   padding: 0 2em 2em 2em;
 }
+
+/* footer*/
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-center {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-center a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}

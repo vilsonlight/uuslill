@@ -206,8 +206,7 @@ h1 {
 section {
   margin: 2em auto;
   width: min(75em, 100%);
-  background-image: var(--section-bg-2);
-  /* background-color: var(--color-5); */
+  background-image: var(--base-color);
   padding: min(2em, 15%);
   border-radius: 1em;
 }

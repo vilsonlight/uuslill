@@ -314,6 +314,17 @@ h2 {
   font-family: "Playfair Display", serif;
 }
 
+.product-desc {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.product-price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 800px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -535,4 +546,35 @@ details p {
   color: #aaa;
   border-top: 1px solid #eee;
   padding-top: 10px;
+}
+
+.seo-section {
+  padding: 40px 20px;
+}
+
+.seo-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.seo-box {
+  flex: 1;
+  min-width: 250px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.seo-box h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.seo-box p {
+  font-size: 15px;
+  line-height: 1.5;
 }

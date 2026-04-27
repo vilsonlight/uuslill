@@ -195,6 +195,7 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
   transition: all 0.25s ease;
+  margin-top: 12px; /* 👈 SEE LAHENDAB SU PROBLEEMI */
 }
 
 .cta-button:hover {
@@ -619,4 +620,73 @@ details p {
 
 .promo-content .cta-button:hover {
   opacity: 0.85;
+}
+
+/* pulmaseaded*/
+
+.wedding-categories {
+  padding: 40px 20px;
+}
+
+.wedding-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.gallery-preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.gallery-preview img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .wedding-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* pulma salider*/
+
+.slider-container-pulm {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.slide-pulm {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide-pulm.active {
+  opacity: 1;
+}
+
+/*pealkirjad*/
+
+.product-section-title {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0 25px;
+}
+
+.product-section-title h2 {
+  color: black;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
 }

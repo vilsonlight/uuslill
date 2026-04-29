@@ -688,6 +688,7 @@
         <label for="size">5. Suurus</label>
         <select id="size" name="suurus" required>
           <option value="">Vali suurus</option>
+          <option value="∅50cm">∅60 cm</option>
           <option value="∅60cm">∅60 cm</option>
           <option value="∅80cm">∅80 cm</option>
         </select>
@@ -709,11 +710,12 @@
           sularahas.
         </p>
 
-        <p>
-          Saatsite tellimuse. 1,5h jooksul saadame teile tellimuse kinnituse.
-        </p>
-
         <button type="submit">Saada tellimus</button>
+
+        <p id="formMessage" class="success-message">
+          ✔ Tere! Oleme teie tellimuse kätte saanud. Võtame teiega ühendust 1,5
+          tunni jooksul, et tellimus kinnitada.
+        </p>
       </form>
     </section>
 
@@ -881,6 +883,51 @@
           behavior: "smooth",
         });
       }
+    </script>
+
+    <script>
+      const form = document.querySelector("#orderForm form");
+      const message = document.getElementById("formMessage");
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        message.style.display = "none"; // reset
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            message.textContent =
+              "✔ Tere! Oleme teie tellimuse kätte saanud. Võtame teiega ühendust 1,5 tunni jooksul, et tellimus kinnitada.";
+
+            message.style.color = "#1a7f37";
+            message.style.display = "block";
+
+            form.reset();
+
+            message.scrollIntoView({ behavior: "smooth" });
+          } else {
+            throw new Error("Server error");
+          }
+        } catch (error) {
+          message.textContent =
+            "❌ Vabandame, tellimuse saatmisel tekkis viga. Palun helistage meile.";
+
+          message.style.color = "red";
+          message.style.display = "block";
+
+          message.scrollIntoView({ behavior: "smooth" });
+        }
+      });
     </script>
   </body>
 </html>

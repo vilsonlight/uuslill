@@ -600,7 +600,7 @@ details p {
 }
 
 .promo-content a {
-  color: #d10075;
+  color: black;
   font-weight: 700;
   text-decoration: none;
 }
@@ -620,51 +620,6 @@ details p {
     font-size: 16px;
   }
 }
-
-/*
-
-.promo-box {
-  margin: 60px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.promo-content {
-  max-width: 600px;
-  width: 100%;
-  text-align: center;
-  padding: 30px;
-
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.promo-content p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
-.promo-content .cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-
-  background: #000;
-  color: #fff;
-  font-weight: 600;
-
-  transition: 0.3s;
-}
-
-.promo-content .cta-button:hover {
-  opacity: 0.85;
-}
-
 
 /* pulmaseaded*/
 
@@ -818,43 +773,4 @@ details p {
 
 .mini-gallery-row {
   margin-top: 10px;
-}
-
-/* kastid kus räägin teistest veebides backlingid*/
-
-.info-box {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 24px 28px;
-  background: #f7f3f1;
-  border-radius: 14px;
-}
-
-.info-box p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #222;
-}
-
-.info-box a {
-  color: #d10075;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.info-box a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-
-@media (max-width: 700px) {
-  .info-box {
-    margin: 28px 12px;
-    padding: 20px;
-  }
-
-  .info-box p {
-    font-size: 16px;
-  }
 }

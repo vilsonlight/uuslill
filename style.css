@@ -276,6 +276,14 @@ h2 {
   margin: auto;
 }
 
+.product-grid-leinakimp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
 /* telefon */
 @media screen and (max-width: 768px) {
   .product-grid {
@@ -549,6 +557,9 @@ details p {
   padding-top: 10px;
 }
 
+
+
+
 .seo-section {
   padding: 40px 20px;
 }
@@ -579,6 +590,9 @@ details p {
   font-size: 15px;
   line-height: 1.5;
 }
+
+
+
 
 .promo-box {
   max-width: 1100px;
@@ -619,62 +633,6 @@ details p {
   .promo-content p {
     font-size: 16px;
   }
-}
-
-/* pulmaseaded*/
-
-.wedding-categories {
-  padding: 40px 20px;
-}
-
-.wedding-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.gallery-preview {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.gallery-preview img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  display: block;
-  border-radius: 6px;
-}
-
-@media (max-width: 900px) {
-  .wedding-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* pulma salider*/
-
-.slider-container-pulm {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-}
-
-.slide-pulm {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.slide-pulm.active {
-  opacity: 1;
 }
 
 /*pealkirjad*/

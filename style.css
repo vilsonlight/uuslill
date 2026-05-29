@@ -557,9 +557,6 @@ details p {
   padding-top: 10px;
 }
 
-
-
-
 .seo-section {
   padding: 40px 20px;
 }
@@ -590,9 +587,6 @@ details p {
   font-size: 15px;
   line-height: 1.5;
 }
-
-
-
 
 .promo-box {
   max-width: 1100px;
@@ -731,4 +725,130 @@ details p {
 
 .mini-gallery-row {
   margin-top: 10px;
+}
+
+/* HELLO SECTION */
+
+.hello {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.hello-row {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  margin-bottom: 80px;
+}
+
+.hello-row:last-child {
+  margin-bottom: 0;
+}
+
+.hello-reverse {
+  flex-direction: row-reverse;
+}
+
+.hello-text,
+.hello-image {
+  flex: 1;
+}
+
+.hello h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+  font-weight: 600;
+  color: #221b18;
+}
+
+.hello p {
+  margin: 0;
+  max-width: 560px;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #4f4540;
+}
+
+.hello-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 800px) {
+  .hello {
+    padding: 56px 18px;
+  }
+
+  .hello-row,
+  .hello-reverse {
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 56px;
+  }
+
+  .hello h2 {
+    font-size: 2.1rem;
+  }
+
+  .hello p {
+    font-size: 1rem;
+  }
+
+  .hello-image img {
+    border-radius: 20px;
+  }
+}
+
+/* PULMADE GALERII */
+
+.wedding-gallery {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 70px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 0;
+}
+
+.wedding-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.wedding-gallery-item {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wedding-gallery-item img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .wedding-gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .wedding-gallery {
+    padding: 16px;
+  }
+
+  .wedding-gallery-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 }

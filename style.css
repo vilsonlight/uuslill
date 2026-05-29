@@ -852,3 +852,42 @@ details p {
     gap: 22px;
   }
 }
+
+.gallery-head {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 40px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.gallery-head h2 {
+  margin: 0 0 15px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.gallery-head p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .gallery-head {
+    padding: 30px 24px;
+    margin-bottom: 35px;
+  }
+
+  .gallery-head h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-head p {
+    font-size: 1rem;
+  }
+}

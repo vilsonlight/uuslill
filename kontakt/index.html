@@ -27,21 +27,26 @@
     
     <header>
 
-    <nav>
-        <ul>
-            <li> <a href="/" class="logo-link">
-             <img src="/images/logo23.webp" alt="Uus Lill logo"
-             width="25"
-            height="25"
-             
-             ></a></li>
-          <li><a href="/haapsalulillekuller/">Lillekuller</a></li>
-          <li><a href="/matuseparjad/">Pärjad</a></li>
-          <li><a href="/leinakimbud/">Leinakimbud</a></li>
-          <li><a href="/kontakt/">Kontakt</a></li>
-          
-        </ul>
-      </nav>
+   <nav>
+      <a href="/" class="logo-link">
+        <img
+          src="/images/logo23.webp"
+          alt="Uus Lill lillepood Haapsalus"
+          width="32"
+          height="32"
+        />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Menüü">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="/haapsalulillekuller/">Lillekuller</a></li>
+        <li><a href="/matuseparjad/">Pärjad</a></li>
+        <li><a href="/leinakimbud/">Leinakimbud</a></li>
+        <li><a href="/pulmaseaded/">Pulmaseaded</a></li>
+        <li><a href="/kontakt/">Kontakt</a></li>
+      </ul>
+    </nav>
  
 
     </header>
@@ -50,8 +55,10 @@
 
 
 
-<section>
+   <section>
   <div class="flex-container">
+
+
     <!-- Slaideri box -->
     <div class="slider-container">
       <img src="/images/uuslill-.jpg" class="slide active" alt="Haapsalu lillepood Uus Lill" />
@@ -68,6 +75,9 @@
   matusepärjad ja leinakimbud. Asume aadressil Tallinna mnt 84,Haapsalu.
 </p>
     
+</div>
+</div>
+
 
 
 </section>
@@ -114,7 +124,6 @@
 
 
 
-</body>
 
 <footer>
    <div class="footer">
@@ -192,8 +201,28 @@ sliders.forEach((slider) => {
 
     </script>
 
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+      });
+    }
+  });
+</script>
+
+
+
+
+
+
+
 
 </footer>
+</body>
 
 
 </html>

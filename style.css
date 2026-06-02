@@ -80,26 +80,20 @@ h3 {
   font-size: 1.25rem;
 }
 
-/* proov*/
+/* =========================
+   NAV
+========================= */
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
   z-index: 1000;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 1.1em 1.5em;
-
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1em 2em;
+  background: #fff;
 }
 
 .logo-link {
@@ -108,50 +102,96 @@ nav {
 }
 
 .logo-link img {
-  height: 28px;
+  height: 32px;
+  width: auto;
   display: block;
 }
 
-nav ul {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-
+.nav-menu {
   display: flex;
-  gap: 1.8em;
+  align-items: center;
+  gap: 28px;
 
   list-style: none;
   margin: 0;
   padding: 0;
-  align-items: center;
 }
 
-nav a {
-  color: #111;
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu a {
+  display: block;
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-
-  transition: 0.2s ease;
-  padding: 0.3em 0.4em;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-nav a:hover {
-  opacity: 0.6;
+.nav-menu a:hover {
+  color: #000;
 }
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #111;
+}
+
+/* =========================
+   MOBIIL
+========================= */
 
 @media (max-width: 700px) {
   nav {
-    padding: 0.6em 1em;
+    padding: 0.9em 1em;
   }
 
-  nav ul {
-    gap: 1em;
+  .menu-toggle {
+    display: block;
   }
 
-  nav a {
-    font-size: 0.8rem;
+  .nav-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+
+    flex-direction: column;
+    gap: 0;
+
+    padding: 15px 0;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    z-index: 1001;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 14px;
+    color: #111;
+    font-size: 1rem;
   }
 }
 

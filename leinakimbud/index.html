@@ -92,16 +92,18 @@
   <body>
     <header>
       <nav>
-        <ul>
-          <li>
-            <a href="/" class="logo-link">
-              <img
-                src="/images/logo23.webp"
-                alt="Uus Lill logo"
-                width="25"
-                height="25"
-            /></a>
-          </li>
+        <a href="/" class="logo-link">
+          <img
+            src="/images/logo23.webp"
+            alt="Uus Lill lillepood Haapsalus"
+            width="32"
+            height="32"
+          />
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Menüü">☰</button>
+
+        <ul class="nav-menu">
           <li><a href="/haapsalulillekuller/">Lillekuller</a></li>
           <li><a href="/matuseparjad/">Pärjad</a></li>
           <li><a href="/leinakimbud/">Leinakimbud</a></li>
@@ -179,7 +181,7 @@
     </section>
 
     <section>
-      <div class="product-grid">
+      <div class="product-grid-leinakimp">
         <div class="product-box">
           <img
             src="/images/Leinakimbud.webp"
@@ -198,7 +200,7 @@
             class="cta-button"
             onclick="selectProduct('LE1')"
           >
-            Tellima
+            Tellin
           </a>
         </div>
 
@@ -213,7 +215,7 @@
           <p class="product-desc">Liilia, roos, krüsanteem.</p>
           <p class="product-price">Hind: 75€</p>
           <a href="#orderForm" class="cta-button" onclick="selectProduct('LE2')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -228,7 +230,7 @@
           <p class="product-desc">Gerbera, krüsanteem ja liilia.</p>
           <p class="product-price">Hind: 85€</p>
           <a href="#orderForm" class="cta-button" onclick="selectProduct('LE3')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -243,7 +245,7 @@
           <p class="product-desc">Kalla, krüsanteem, gerbera ja liilia.</p>
           <p class="product-price">Hind: 85€</p>
           <a href="#orderForm" class="cta-button" onclick="selectProduct('LE4')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -258,7 +260,7 @@
           <p class="product-desc">Roos ja liilia.</p>
           <p class="product-price">Hind: 95€</p>
           <a href="#orderForm" class="cta-button" onclick="selectProduct('LE5')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -273,7 +275,7 @@
           <p class="product-desc">Kalla, liilia ja krüsanteem.</p>
           <p class="product-price">Hind: 115€</p>
           <a href="#orderForm" class="cta-button" onclick="selectProduct('LE6')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -288,7 +290,7 @@
           <p class="product-desc">Roos, kalla, liilia ja krüsanteem.</p>
           <p class="product-price">Hind: 115€</p>
           <a href="#orderForm" class="cta-button" onclick="selectProduct('LE7')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -303,7 +305,7 @@
           <p class="product-desc">Liilia, preeriakell ja krüsanteem.</p>
           <p class="product-price">Hind: 95€</p>
           <a href="#orderForm" class="cta-button" onclick="selectProduct('LE8')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -318,7 +320,7 @@
           <p class="product-desc">Roos ja liilia.</p>
           <p class="product-price">Hind: 115€</p>
           <a href="#orderForm" class="cta-button" onclick="selectProduct('LE9')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -336,7 +338,7 @@
             href="#orderForm"
             class="cta-button"
             onclick="selectProduct('LE10')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -354,7 +356,7 @@
             href="#orderForm"
             class="cta-button"
             onclick="selectProduct('LE11')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -372,7 +374,7 @@
             href="#orderForm"
             class="cta-button"
             onclick="selectProduct('LE12')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -390,7 +392,7 @@
             href="#orderForm"
             class="cta-button"
             onclick="selectProduct('Baham')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -408,7 +410,7 @@
             href="#orderForm"
             class="cta-button"
             onclick="selectProduct('Bunda')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -426,7 +428,7 @@
             href="#orderForm"
             class="cta-button"
             onclick="selectProduct('Maia')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
 
@@ -444,7 +446,7 @@
             href="#orderForm"
             class="cta-button"
             onclick="selectProduct('Manica')"
-            >Tellima</a
+            >Tellin</a
           >
         </div>
       </div>
@@ -728,6 +730,19 @@
               message.style.display = "block";
 
               message.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        </script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector(".nav-menu");
+
+            if (menuToggle && navMenu) {
+              menuToggle.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+              });
             }
           });
         </script>

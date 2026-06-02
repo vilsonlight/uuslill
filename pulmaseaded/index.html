@@ -96,12 +96,45 @@
     </nav>
 
     <header class="hero-header">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="/images/Movie14004.mp4" type="video/mp4" />
-      </video>
+      <div class="big-slider">
+        <div class="big-slide big-slide-active">
+          <img
+            src="/images/Pulmad-Haapsalus-slaider4.webp"
+            alt="Pruudikimbud ja pulmaseaded Haapsalus"
+            width="1920"
+            height="1080"
+          />
 
-      <div class="hero-text">
-        <h1>Pruudikimbud Haapsalus</h1>
+          <div class="big-hero-text">
+            <h1>Pulmaseaded Haapsalus</h1>
+          </div>
+        </div>
+
+        <div class="big-slide">
+          <img
+            src="/images/Pulmad-Haapsalus-slaider5.webp"
+            alt="Pulmaseaded Haapsalus"
+            width="1920"
+            height="1080"
+          />
+
+          <div class="big-hero-text">
+            <h2>Pruudikimbud Haapsalus</h2>
+          </div>
+        </div>
+
+        <div class="big-slide">
+          <img
+            src="/images/Pulmad-Haapsalus-slaider6.webp"
+            alt="Floristika kogemusega alates 1995"
+            width="1920"
+            height="1080"
+          />
+
+          <div class="big-hero-text">
+            <h2>Floristika kogemusega alates 1995</h2>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -568,6 +601,22 @@
           });
         }
       });
+    </script>
+
+    <script>
+      const bigSlides = document.querySelectorAll(".big-slide");
+
+      let bigCurrent = 0;
+
+      if (bigSlides.length > 0) {
+        setInterval(() => {
+          bigSlides[bigCurrent].classList.remove("big-slide-active");
+
+          bigCurrent = (bigCurrent + 1) % bigSlides.length;
+
+          bigSlides[bigCurrent].classList.add("big-slide-active");
+        }, 5000);
+      }
     </script>
   </body>
 </html>

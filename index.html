@@ -98,16 +98,52 @@
 </nav>
 
     <header class="hero-header">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="/images/Movie14004.mp4" type="video/mp4" />
-      </video>
+  <div class="big-slider">
+    <div class="big-slide big-slide-active">
+      <img
+        src="/images/Haapsalu-lillepood-uuslill1.webp"
+        alt="Haapsalu lillepood UUS LILL"
+        width="1920"
+        height="1080"
+      />
 
-      <div class="hero-text">
-        <h1>Haapsalu lillepood Uus Lill</h1>
+      <div class="big-hero-text">
+        <h1>Haapsalu Lillepood UUS LILL</h1>
       </div>
+    </div>
 
-      <!-- Väidetavalt aitab googlit -->
-    </header>
+    <div class="big-slide">
+      <img
+        src="/images/Haapsalu-lillepood-uuslill2.webp"
+        alt="Haapsalu Lillekuller"
+        width="1920"
+        height="1080"
+      />
+
+      <div class="big-hero-text">
+        <h2>Haapsalu Lillekuller</h2>
+      </div>
+    </div>
+
+    <div class="big-slide">
+      <img
+        src="/images/Pulmad-Haapsalus-slaider6.webp"
+        alt="Matusepärjad ja leinakimbud"
+        width="1920"
+        height="1080"
+      />
+
+      <div class="big-hero-text">
+        <h2>Matusepärjad ja Leinakimbud/h2>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
 
       <section class="seo-section">
         <div class="seo-container">
@@ -435,6 +471,27 @@
 
 
  </footer>
+
+    <script>
+      const bigSlides = document.querySelectorAll(".big-slide");
+
+      let bigCurrent = 0;
+
+      if (bigSlides.length > 0) {
+        setInterval(() => {
+          bigSlides[bigCurrent].classList.remove("big-slide-active");
+
+          bigCurrent = (bigCurrent + 1) % bigSlides.length;
+
+          bigSlides[bigCurrent].classList.add("big-slide-active");
+        }, 5000);
+      }
+    </script>
+      
+
+
+
+
 
     <script>
       const sliders = document.querySelectorAll(".slider-container");

@@ -12,7 +12,7 @@
     />
 
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://uuslill.ee/" />
+    <link rel="canonical" href="https://uuslill.ee/pulmaseaded/" />
     <link rel="stylesheet" href="/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,7 +32,7 @@
       content="Lillepood Uus Lill Haapsalus valmistab pruudikimpe, pulmalilli ja lilleseadeid pulmadeks."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://uuslill.ee/" />
+    <meta property="og:url" content="https://uuslill.ee/pulmaseaded/" />
     <meta
       property="og:image"
       content="https://uuslill.ee/images/pruudikimp-3-scaled.webp"
@@ -75,15 +75,22 @@
 
   <body>
     <nav>
-      <ul>
-        <li>
-          <a href="/" class="logo-link">
-            <img src="/images/logo23.webp" alt="Uus Lill lillepood Haapsalus" />
-          </a>
-        </li>
+      <a href="/" class="logo-link">
+        <img
+          src="/images/logo23.webp"
+          alt="Uus Lill lillepood Haapsalus"
+          width="32"
+          height="32"
+        />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Menüü">☰</button>
+
+      <ul class="nav-menu">
         <li><a href="/haapsalulillekuller/">Lillekuller</a></li>
         <li><a href="/matuseparjad/">Pärjad</a></li>
         <li><a href="/leinakimbud/">Leinakimbud</a></li>
+        <li><a href="/pulmaseaded/">Pulmaseaded</a></li>
         <li><a href="/kontakt/">Kontakt</a></li>
       </ul>
     </nav>
@@ -549,5 +556,18 @@
         <div class="footer-bottom">© 2026 Vilsonlight</div>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu");
+
+        if (menuToggle && navMenu) {
+          menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+          });
+        }
+      });
+    </script>
   </body>
 </html>

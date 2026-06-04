@@ -627,7 +627,7 @@ details p {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .seo-box h2 {
@@ -646,6 +646,7 @@ details p {
   padding: 26px 30px;
   background: #f9f9f9;
   border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .promo-content {
@@ -829,7 +830,7 @@ details p {
   object-fit: cover;
   display: block;
   border-radius: 28px;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 800px) {
@@ -955,7 +956,7 @@ details p {
   background: #f9f9f9;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .intro-container h2 {
@@ -971,4 +972,20 @@ details p {
 
 .intro-container p:last-child {
   margin-bottom: 0;
+}
+
+/* LEINAKIMBUD HAAPSALUS */
+
+.leinakimbud-haapsalus {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.leinakimbud-haapsalus .hello-text p + p {
+  margin-top: 18px;
+}
+
+.leinakimbud-haapsalus strong {
+  color: #2b2522;
 }

@@ -8,7 +8,7 @@
 
     <meta
       name="description"
-      content="Leinakimbud Haapsalus ja Läänemaal. Käsitööna valmistatud leinakimbud ja matusekimbud. Kiire tellimine Lillepood Uus Lill."
+      content="Leinakimbud Haapsalus ja Läänemaal. Leinakimbud kirstu- ja urnimatustele. Tellimine Haapsalu lillepoest UUS LILL."
     />
 
     <link
@@ -112,42 +112,51 @@
       </nav>
     </header>
 
-    <section>
-      <div class="flex-container">
-        <!-- Slaideri box -->
-        <div class="slider-container">
+    <header class="hero-header">
+      <div class="big-slider">
+        <div class="big-slide big-slide-active">
           <img
-            src="/images/leinakimbud Haapsalus (8).webp"
-            class="slide active"
-            alt="Leinakimbud gerberatest ja krüsanteemidest"
-          />
-          <img
-            src="/images/leinakimbud Haapsalus (7).webp"
-            class="slide"
-            alt="Matusepärjad ja Leinakimbud"
-          />
-          <img
-            src="/images/leinakimbud Haapsalus (5).webp"
-            class="slide"
-            alt="Leinaseaded Haapsalus"
+            src="/images/Leinakimbud-slaider-a.webp"
+            alt="Leinakimbud Haapsalus"
+            width="1920"
+            height="1080"
           />
 
-          <img
-            src="/images/leinakimbud Haapsalus.webp"
-            class="slide"
-            alt="Leinaseaded Haapsalus"
-          />
+          <div class="big-hero-text">
+            <h1>Leinakimbud Haapsalus</h1>
+          </div>
         </div>
 
-        <!-- Tekstiplokk -->
-        <div class="text-container">
-          <h1>Leinakimbud Haapsalus</h1>
-          <p>
-            Leinakimbud on sobilikud kirstumatuse, kui ka urnimatuse korral.
-            Leinakimbu mõõdud : pikkus 60 cm , laius 30cm. Tekstid lindil
-            ilukirjas. Leinakimbud, matusekimbud ja leinaseaded Haapsalus.
-          </p>
+        <div class="big-slide">
+          <img
+            src="/images/Leinakimbud-slaider-a1.webp"
+            alt="Leinakimbud ja matusekimbud Haapsalus"
+            width="1920"
+            height="1080"
+          />
+
+          <div class="big-hero-text">
+            <h2>Leinakimbud Haapsalus ja Läänemaal</h2>
+          </div>
         </div>
+      </div>
+    </header>
+
+    <section class="intro-text">
+      <div class="intro-container">
+        <h2>Leinakimbud matustele</h2>
+
+        <p>
+          Leinakimp on väärikas viis avaldada viimast austust lahkunule.
+          Valmistame leinakimpe nii kirstu- kui urnimatustele Haapsalus ja
+          Läänemaal.
+        </p>
+
+        <p>
+          Kõik leinakimbud valmivad Haapsalu lillepoes UUS LILL. Soovi korral
+          lisame leinalindi tekstiga ning aitame valida sobiva lahenduse
+          vastavalt tseremooniale.
+        </p>
       </div>
     </section>
 
@@ -156,9 +165,9 @@
         <div class="seo-box">
           <h2>Leinakimbud Haapsalus</h2>
           <p>
-            Pakume leinakimpe Haapsalus ja Läänemaal kiire tellimisega. Kõik
-            kimbud valmivad lillepoes UUS LILL ning sobivad nii kirstu- kui
-            urnimatustele.
+            Leinakimbud on sobilikud nii kirstu- kui ka urnimatuse korral.
+            Leinakimbu mõõdud : pikkus 60 cm , laius 30cm. Tekstid lindil
+            ilukirjas. Leinakimbud, matusekimbud ja leinaseaded Haapsalus.
           </p>
         </div>
 
@@ -449,6 +458,24 @@
             >Tellin</a
           >
         </div>
+
+        <div class="product-box">
+          <img
+            src="/images/Leinakimbud-Haapsalus-Decrux.webp"
+            alt="Leinakimp preeriakellade ja liiliaga Haapsalus"
+            width="830"
+            height="554"
+          />
+          <h3>Leinakimp Decrux</h3>
+          <p class="product-desc">Preeriakell, liilia ja krüsanteem.</p>
+          <p class="product-price">Hind: 115€</p>
+          <a
+            href="#orderForm"
+            class="cta-button"
+            onclick="selectProduct('Decrux')"
+            >Tellin</a
+          >
+        </div>
       </div>
     </section>
 
@@ -483,6 +510,7 @@
           <option value="Bunda">Bunda</option>
           <option value="Maia">Maia</option>
           <option value="Manica">Manica</option>
+          <option value="Decrux">Decrux</option>
         </select>
 
         <label for="text">5. Tekst lindil</label>
@@ -745,6 +773,22 @@
               });
             }
           });
+        </script>
+
+        <script>
+          const bigSlides = document.querySelectorAll(".big-slide");
+
+          let bigCurrent = 0;
+
+          if (bigSlides.length > 0) {
+            setInterval(() => {
+              bigSlides[bigCurrent].classList.remove("big-slide-active");
+
+              bigCurrent = (bigCurrent + 1) % bigSlides.length;
+
+              bigSlides[bigCurrent].classList.add("big-slide-active");
+            }, 5000);
+          }
         </script>
       </div>
     </footer>

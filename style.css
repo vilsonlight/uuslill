@@ -388,7 +388,7 @@ h2 {
 
 @media (max-width: 800px) {
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 

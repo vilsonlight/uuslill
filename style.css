@@ -273,7 +273,6 @@ section {
   width: min(75em, 100%);
   background-image: var(--base-color);
   padding: min(2em, 15%);
-  border-radius: 1em;
 }
 
 h2 {
@@ -731,7 +730,7 @@ details p {
   background: white;
   padding: 20px;
   max-width: 300px;
-  border-radius: 12px;
+
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1049,4 +1048,54 @@ details p {
     right: 6%;
     bottom: 14%;
   }
+}
+
+.reviews-photo-bg {
+  position: relative;
+  padding: 90px 20px;
+  background-image: url("/images/Haapsalu-lillepood-uuslill1.webp");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.reviews-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  z-index: 1;
+}
+
+.reviews-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews-kicker {
+  margin: 0 0 10px;
+  color: #d4af37;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reviews-section h2 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.review-box {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+.review-stars {
+  color: #d4af37;
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
 }

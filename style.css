@@ -975,17 +975,17 @@ details p {
 
 /* LEINAKIMBUD HAAPSALUS */
 
-.leinakimbud-haapsalus {
+.haapsalus {
   max-width: 1180px;
   margin: 0 auto;
   padding: 80px 20px;
 }
 
-.leinakimbud-haapsalus .hello-text p + p {
+.haapsalus .hello-text p + p {
   margin-top: 18px;
 }
 
-.leinakimbud-haapsalus strong {
+.haapsalus strong {
   color: #2b2522;
 }
 

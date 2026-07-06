@@ -710,13 +710,9 @@ details p {
 /*Klientide kommentaarid*/
 
 .reviews-section {
-  padding: 60px 20px;
+  padding: 35px 20px;
   text-align: center;
   background-color: #fafafa;
-}
-
-.reviews-section h2 {
-  margin-bottom: 40px;
 }
 
 .reviews-container {
@@ -823,12 +819,19 @@ details p {
   color: #4f4540;
 }
 
+.hello p + p {
+  margin-top: 18px;
+}
+
+.hello strong {
+  color: #2b2522;
+}
+
 .hello-image img {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   display: block;
-  border-radius: 28px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -973,22 +976,6 @@ details p {
   margin-bottom: 0;
 }
 
-/* LEINAKIMBUD HAAPSALUS */
-
-.haapsalus {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 80px 20px;
-}
-
-.haapsalus .hello-text p + p {
-  margin-top: 18px;
-}
-
-.haapsalus strong {
-  color: #2b2522;
-}
-
 /* UUS LILL VIDEO HERO - test */
 
 .uul-video-hero {
@@ -1074,26 +1061,10 @@ details p {
   text-align: center;
 }
 
-.reviews-kicker {
-  margin: 0 0 10px;
-  color: #d4af37;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.reviews-section h2 {
-  color: #fff;
-  margin-bottom: 40px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
-}
-
 .review-box {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border: none;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
   padding: 28px;
 }
 

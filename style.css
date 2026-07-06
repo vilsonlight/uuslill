@@ -856,7 +856,6 @@ details p {
   }
 
   .hello-image img {
-   
   }
 }
 
@@ -1068,4 +1067,75 @@ details p {
   color: #d4af37;
   font-size: 1.3rem;
   letter-spacing: 0.08em;
+}
+
+/* REVIEW SLIDER */
+
+.review-slider-section {
+  padding: 40px 0;
+
+  background-image: url("/images/Haapsalu-lillepood-uuslill1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+.review-slider-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.review-slider {
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.review-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+
+  animation: reviewScroll 35s linear infinite;
+}
+
+.review-slider:hover .review-track {
+  animation-play-state: paused;
+}
+
+.review-card {
+  width: 280px;
+  flex-shrink: 0;
+
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.review-text {
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.review-author {
+  font-weight: 600;
+}
+
+.review-stars {
+  margin-top: 8px;
+  color: #f5b301;
+}
+
+@keyframes reviewScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }

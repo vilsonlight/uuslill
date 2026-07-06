@@ -83,6 +83,7 @@
       alt="Uus Lill lillepood Haapsalus"
       width="32"
       height="32"
+      decoding="async"
     />
   </a>
 
@@ -107,7 +108,11 @@
   <div class="uul-video-hero__content">
     <h1>Haapsalu Lillepood UUS LILL</h1>
     <p>Lilled räägivad rohkem kui sõnad.</p>
-    <a href="/haapsalulillekuller/" class="cta-button">Saada lilli Haapsalu</a>
+    <a href="/haapsalulillekuller/" class="cta-button">Saada lilli</a>
+    <a href= "/matuseparjad/"class="cta-button">Telli pärg</a>
+    <a href= "/leinakimbud/"class="cta-button">Telli leinakimp</a>
+
+
   </div>
 </header>
 
@@ -144,41 +149,71 @@
 </section>
 
 
+    <section class="review-slider-section">
 
-<section class="reviews-section reviews-photo-bg">
-  <div class="reviews-overlay"></div>
+  <div class="review-slider">
+    <div class="review-track">
+      <div class="review-card">
+        <p class="review-text">
+          "Suur tänu ilusa kimbu eest. Tellisin kimbu Ocean ja tulemus vastas
+          täielikult e-poes nähtud foto emotsioonile."
+        </p>
+        <p class="review-author">– Marie Gaaver</p>
+        <p class="review-stars">★★★★★</p>
+      </div>
 
-  
+      <div class="review-card">
+        <p class="review-text">
+          "Parim lilleteenus! Andekad, vastutulelikud ja mõistlikud hinnad.
+          Tellin Ühendriikidest ja pole iial probleeme olnud."
+        </p>
+        <p class="review-author">– Ruu Silvermann</p>
+        <p class="review-stars">★★★★★</p>
+      </div>
 
+      <div class="review-card">
+        <p class="review-text">
+          "Uus Lill pakub alati värskeid ja kauneid lilli. Klienditeenindus on
+          sõbralik ja professionaalne."
+        </p>
+        <p class="review-author">– Merly Raude</p>
+        <p class="review-stars">★★★★★</p>
+      </div>
 
-  <div class="reviews-container">
+      <!-- Sama kolm korduvad, et lint jookseks sujuvalt -->
+      <div class="review-card">
+        <p class="review-text">
+          "Suur tänu ilusa kimbu eest. Tellisin kimbu Ocean ja tulemus vastas
+          täielikult e-poes nähtud foto emotsioonile."
+        </p>
+        <p class="review-author">– Marie Gaaver</p>
+        <p class="review-stars">★★★★★</p>
+      </div>
 
-    <div class="review-box">
-      <p class="review-text">
-        "Suur tänu ilusa kimbu eest. Tellisin kimbu Ocean ja tulemus vastas täielikult epoes nähtud foto emotsioonile. Saaja oli vaimustatud ja kohaleviimine toimus vastavalt tellija soovile. Väga rahul ja soovitan soojalt."
-      </p>
-      <p class="review-author">– Marie Gaaver</p>
-      <p class="review-stars">★★★★★</p>
+      <div class="review-card">
+        <p class="review-text">
+          "Parim lilleteenus! Andekad, vastutulelikud ja mõistlikud hinnad.
+          Tellin Ühendriikidest ja pole iial probleeme olnud."
+        </p>
+        <p class="review-author">– Ruu Silvermann</p>
+        <p class="review-stars">★★★★★</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-text">
+          "Uus Lill pakub alati värskeid ja kauneid lilli. Klienditeenindus on
+          sõbralik ja professionaalne."
+        </p>
+        <p class="review-author">– Merly Raude</p>
+        <p class="review-stars">★★★★★</p>
+      </div>
     </div>
-
-    <div class="review-box">
-      <p class="review-text">
-        "Parim lilleteenus! Andekad, vastutulelikud ja mõistlikud hinnad. Tellin Ühendriikidest ja pole iial probleemi olnud. Imeline teenus, soovitan soojalt!!!!."
-      </p>
-      <p class="review-author">– Ruu Silvermann.</p>
-      <p class="review-stars">★★★★★</p>
-    </div>
-
-    <div class="review-box">
-      <p class="review-text">
-        "Haapsalu lillepood Uus Lill pakub alati värskeid ja kauneid lilli. Klienditeenindus on sõbralik ja professionaalne. Kullerid on usaldusväärsed, toimetavad lilled alati õigeaegselt kohale.."
-      </p>
-      <p class="review-author">– Merly Raude.</p>
-      <p class="review-stars">★★★★★</p>
-    </div>
-
   </div>
 </section>
+
+
+
+
 
 
 
@@ -371,44 +406,7 @@
 
  </footer>
 
-    <script>
-      const bigSlides = document.querySelectorAll(".big-slide");
-
-      let bigCurrent = 0;
-
-      if (bigSlides.length > 0) {
-        setInterval(() => {
-          bigSlides[bigCurrent].classList.remove("big-slide-active");
-
-          bigCurrent = (bigCurrent + 1) % bigSlides.length;
-
-          bigSlides[bigCurrent].classList.add("big-slide-active");
-        }, 5000);
-      }
-    </script>
       
-
-
-
-
-
-    <script>
-      const sliders = document.querySelectorAll(".slider-container");
-
-      sliders.forEach((slider) => {
-        const slides = slider.querySelectorAll(".slide");
-        let current = 0;
-
-        function nextSlide() {
-          slides[current].classList.remove("active");
-          current = (current + 1) % slides.length;
-          slides[current].classList.add("active");
-        }
-
-        setInterval(nextSlide, 3000);
-      });
-    </script>
-
 
 
    <script>

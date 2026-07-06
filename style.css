@@ -856,7 +856,7 @@ details p {
   }
 
   .hello-image img {
-    border-radius: 20px;
+   
   }
 }
 
@@ -868,7 +868,6 @@ details p {
   margin: 0 auto 70px;
   padding: 20px;
   background: #fff;
-  border-radius: 0;
 }
 
 .wedding-gallery-container {
@@ -879,7 +878,6 @@ details p {
 
 .wedding-gallery-item {
   overflow: hidden;
-  border-radius: 18px;
   background: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -913,7 +911,6 @@ details p {
   margin: 0 auto 50px;
   padding: 40px;
   background: #fff;
-  border-radius: 18px;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
@@ -957,7 +954,6 @@ details p {
 
   background: #f9f9f9;
   padding: 30px;
-  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 

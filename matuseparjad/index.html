@@ -77,90 +77,45 @@
       </ul>
     </nav>
 
-    <section>
-      <div class="flex-container">
-        <!-- Slaideri box -->
-        <div class="slider-container">
+    <header class="hero-header">
+      <div class="big-slider">
+        <div class="big-slide big-slide-active">
           <img
-            src="/images/pärg1.webp"
-            class="slide active"
-            alt="Matusepärjad gerberatest ja krüsanteemidest"
-            width="525"
-            height="525"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          />
-          <img
-            src="/images/pärg2.webp"
-            class="slide"
-            alt="Klassikaline matusepärg Haapsalus"
-            width="525"
-            height="525"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="/images/pärg3.webp"
-            class="slide"
-            alt="Matusepärg liiliatest ja roosidest"
-            width="525"
-            height="525"
-            loading="lazy"
-            decoding="async"
+            src="/images/Matuseparjad-slaider-a.webp"
+            alt="Matusepärjad Haapsalus"
+            width="1920"
+            height="1080"
           />
 
-          <img
-            src="/images/matusepärjad-Haapsalus (1).webp"
-            class="slide"
-            alt="täislilledest matusepärg Haapsalus"
-            width="525"
-            height="525"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <img
-            src="/images/matusepärjad-Haapsalus (4).webp"
-            class="slide"
-            alt="Matusepärg Haapsalus"
-            width="525"
-            height="525"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <img
-            src="/images/matusepärjad-Haapsalus (3).webp"
-            class="slide"
-            alt="Pärja tellimine Haapsalus"
-            width="525"
-            height="525"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <img
-            src="/images/matusepärjad-Haapsalus (2).webp"
-            class="slide"
-            alt="Oranžides toonides matusepärg"
-            width="525"
-            height="525"
-            loading="lazy"
-            decoding="async"
-          />
+          <div class="big-hero-text">
+            <h1>Matusepärjad Haapsalus</h1>
+          </div>
         </div>
 
-        <!-- Tekstiplokk -->
-        <div class="text-container">
-          <h1>Matusepärjad Haapsalus</h1>
+        <div class="big-slide">
+          <img
+            src="/images/Matuseparjad-slaider-a1.webp"
+            alt="Matusepärjad Haapsalus Haapsalus"
+            width="1920"
+            height="1080"
+          />
 
-          <p>
-            Uus Lill valmistab matusepärgi Haapsalus ja Läänemaal. Matusepärg on
-            väärikas ja südamlik austusavaldus lahkunule. Lilled asetatakse
-            märga oaasi, mis aitab säilitada nende värskuse ja kauni välimuse.
-          </p>
+          <div class="big-hero-text">
+            <h2>Professionaalne floristika</h2>
+          </div>
         </div>
+      </div>
+    </header>
+
+    <section class="intro-section">
+      <div class="intro-container">
+        <h2>Matusepärjad Haapsalus</h2>
+
+        <p>
+          Uus Lill valmistab matusepärgi Haapsalus ja Läänemaal. Matusepärg on
+          väärikas ja südamlik austusavaldus lahkunule. Lilled asetatakse märga
+          oaasi, mis aitab säilitada nende värskuse ja kauni välimuse.
+        </p>
       </div>
     </section>
 
@@ -1134,6 +1089,22 @@
           });
         }
       });
+    </script>
+
+    <script>
+      const bigSlides = document.querySelectorAll(".big-slide");
+
+      let bigCurrent = 0;
+
+      if (bigSlides.length > 0) {
+        setInterval(() => {
+          bigSlides[bigCurrent].classList.remove("big-slide-active");
+
+          bigCurrent = (bigCurrent + 1) % bigSlides.length;
+
+          bigSlides[bigCurrent].classList.add("big-slide-active");
+        }, 5000);
+      }
     </script>
   </body>
 </html>

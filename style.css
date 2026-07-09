@@ -109,15 +109,23 @@ h3 {
 ========================= */
 
 nav {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 1em 2em;
-  background: #fff;
+  padding: 1.1em 1.5em;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .logo-link {
@@ -742,37 +750,6 @@ details p {
 .review-stars {
   color: #f5b301;
   margin-top: 5px;
-}
-
-/*galerii*/
-
-.mini-gallery {
-  margin-top: 60px;
-  text-align: center;
-}
-
-.mini-gallery-row {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.mini-gallery-row img {
-  width: 400px;
-  border-radius: 6px;
-}
-
-.mini-gallery h3 {
-  margin-bottom: 10px;
-}
-
-.mini-gallery p {
-  margin-bottom: 20px;
-}
-
-.mini-gallery-row {
-  margin-top: 10px;
 }
 
 /* HELLO SECTION */

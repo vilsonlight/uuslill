@@ -174,7 +174,7 @@
 
     <section class="hello">
       <div class="hello-row">
-        <div class="hello-text">
+        <div class="hello-text reveal-left">
           <h2>Leinatööd näitavad floristi taset</h2>
 
           <p>
@@ -199,7 +199,7 @@
       </div>
 
       <div class="hello-row hello-reverse">
-        <div class="hello-text">
+        <div class="hello-text reveal-right">
           <h2>Professionaalne lilleseade</h2>
 
           <p>
@@ -640,25 +640,6 @@
       </details>
     </section>
 
-    <section class="mini-gallery">
-      <h3>Viimased tööd</h3>
-      <p>
-        Töö käib meil igapäevaselt ning kõiki valminud kimpe ei jõua pildistada.
-        Siia oleme toonud vaid väikese valiku näiteid.
-      </p>
-
-      <div class="mini-gallery-row">
-        <img
-          src="/images/Leinakimbud Haapsalus (1).webp"
-          alt="Leinakimbud Haapsalus"
-        />
-        <img
-          src="/images/Leinakimbud Haapsalus (3).webp"
-          alt="Leinakimbud Haapsalus"
-        />
-      </div>
-    </section>
-
     <section class="promo-box">
       <div class="promo-content">
         <p>
@@ -817,6 +798,26 @@
               bigSlides[bigCurrent].classList.add("big-slide-active");
             }, 5000);
           }
+        </script>
+        <script>
+          const reveals = document.querySelectorAll(
+            ".reveal-left, .reveal-right",
+          );
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("reveal-active");
+                }
+              });
+            },
+            {
+              threshold: 0.25,
+            },
+          );
+
+          reveals.forEach((item) => observer.observe(item));
         </script>
       </div>
     </footer>

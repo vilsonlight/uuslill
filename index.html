@@ -453,6 +453,33 @@ Suured tänud."
 
       
 
+ <!-- UUS LILL ANU TEGELANE -->
+<div class="anu-character" id="anuCharacter" aria-hidden="true">
+  <div
+    class="anu-character-message"
+    id="anuCharacterMessage"
+    role="status"
+  >
+    Hei! Tore Sind näha. Loodan, et leiad , mida otsid ...
+  </div>
+
+  <div class="anu-character-stage">
+    <img
+      class="anu-character-pose anu-character-pose-1"
+      src="/images/anu-pose-1.png"
+      alt=""
+      decoding="async"
+    />
+
+    <img
+      class="anu-character-pose anu-character-pose-2"
+      src="/images/anu-pose-2.png"
+      alt=""
+      decoding="async"
+    />
+  </div>
+</div>
+
 
    <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -484,6 +511,77 @@ Suured tänud."
   );
 
   reveals.forEach((item) => observer.observe(item));
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const anuCharacter = document.getElementById("anuCharacter");
+
+    if (!anuCharacter) {
+      return;
+    }
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    /* Vähendatud liikumise seadistus */
+
+    if (reducedMotion) {
+      anuCharacter.classList.add(
+        "is-visible",
+        "is-presenting",
+        "is-speaking"
+      );
+
+      anuCharacter.setAttribute("aria-hidden", "false");
+
+      setTimeout(function () {
+        anuCharacter.classList.add("is-leaving");
+        anuCharacter.setAttribute("aria-hidden", "true");
+      }, 7000);
+
+      setTimeout(function () {
+        anuCharacter.remove();
+      }, 8000);
+
+      return;
+    }
+
+    /* 1. Anu ilmub esimese poosiga */
+
+    setTimeout(function () {
+      anuCharacter.classList.add("is-visible");
+      anuCharacter.setAttribute("aria-hidden", "false");
+    }, 1800);
+
+    /* 2. Anu vahetab poosi ja ilmub jutukast */
+
+    setTimeout(function () {
+      anuCharacter.classList.add("is-presenting", "is-speaking");
+    }, 4300);
+
+    /* 3. Jutukast kaob */
+
+    setTimeout(function () {
+      anuCharacter.classList.remove("is-speaking");
+    }, 9500);
+
+    /* 4. Anu lahkub */
+
+    setTimeout(function () {
+      anuCharacter.classList.remove("is-visible");
+      anuCharacter.classList.add("is-leaving");
+      anuCharacter.setAttribute("aria-hidden", "true");
+    }, 10500);
+
+    /* 5. Anu eemaldatakse lehelt */
+
+    setTimeout(function () {
+      anuCharacter.remove();
+    }, 11800);
+  });
 </script>
 
 

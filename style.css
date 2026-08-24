@@ -1009,9 +1009,6 @@ details p {
   }
 }
 
-
-
-
 .reviews-photo-bg {
   position: relative;
   padding: 90px 20px;
@@ -1182,5 +1179,187 @@ details p {
     opacity: 1;
     transform: translateX(0);
     filter: blur(0);
+  }
+}
+
+/* =========================
+   ANU TEGELANE – KAKS POOSI
+========================= */
+
+.anu-character {
+  position: fixed;
+  right: 24px;
+  bottom: 0;
+  z-index: 1000;
+
+  width: clamp(160px, 15vw, 250px);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(calc(100% + 60px));
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
+  pointer-events: none;
+}
+
+/* Anu tuleb ekraanile */
+
+.anu-character.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Anu lahkub ekraanilt */
+
+.anu-character.is-leaving {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(calc(100% + 60px));
+}
+
+/* =========================
+   PILTIDE ÜHINE ALA
+========================= */
+
+.anu-character-stage {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 2 / 3;
+
+  filter: drop-shadow(0 18px 20px rgba(0, 0, 0, 0.3));
+}
+
+.anu-character-pose {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  transition: opacity 0.35s ease;
+}
+
+/* Esimene poos on alguses nähtav */
+
+.anu-character-pose-1 {
+  opacity: 1;
+}
+
+/* Teine poos on alguses peidetud */
+
+.anu-character-pose-2 {
+  opacity: 0;
+}
+
+/* Pooside vahetus */
+
+.anu-character.is-presenting .anu-character-pose-1 {
+  opacity: 0;
+}
+
+.anu-character.is-presenting .anu-character-pose-2 {
+  opacity: 1;
+}
+
+/* =========================
+   JUTUKAST
+========================= */
+
+.anu-character-message {
+  position: absolute;
+  right: 72%;
+  bottom: 22%;
+  z-index: 3;
+
+  width: 240px;
+  padding: 15px 17px;
+
+  color: #ffffff;
+  background: #000000;
+  border: 2px solid #d10074;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* Jutukasti väike nool */
+
+.anu-character-message::after {
+  content: "";
+
+  position: absolute;
+  right: -9px;
+  bottom: 20px;
+
+  width: 14px;
+  height: 14px;
+
+  background: #000000;
+  border-top: 2px solid #d10074;
+  border-right: 2px solid #d10074;
+
+  transform: rotate(45deg);
+}
+
+/* Jutukast ilmub */
+
+.anu-character.is-speaking .anu-character-message {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =========================
+   MOBIIL
+========================= */
+
+@media (max-width: 700px) {
+  .anu-character {
+    right: 6px;
+    width: min(42vw, 190px);
+  }
+
+  .anu-character-message {
+    right: 65%;
+    bottom: 20%;
+
+    width: min(190px, 49vw);
+    padding: 11px 12px;
+
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+}
+
+/* =========================
+   VÄHENDATUD LIIKUMINE
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .anu-character,
+  .anu-character-pose,
+  .anu-character-message {
+    transition-duration: 0.01ms;
   }
 }

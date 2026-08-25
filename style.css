@@ -689,19 +689,21 @@ details p {
   }
 }
 
-/*pealkirjad*/
+.product-section {
+  padding-top: 25px;
+}
 
 .product-section-title {
   width: 100%;
   text-align: center;
-  margin: 50px 0 25px;
+  margin: 0 0 40px;
 }
 
 .product-section-title h2 {
   color: black;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 25px;
 }
-
 /*sõnum kliendlie*/
 
 .success-message {

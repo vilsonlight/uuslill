@@ -1366,3 +1366,79 @@ details p {
     transition-duration: 0.01ms;
   }
 }
+
+/* MATUSEPÄRGADE KATEGOORIAD */
+
+.wreath-categories {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+.wreath-categories > h2 {
+  margin: 0 0 40px;
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #221b18;
+}
+
+.wreath-category-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+}
+
+.wreath-category-card {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.wreath-category-card > a {
+  display: block;
+}
+
+.wreath-category-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wreath-category-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 25px;
+}
+
+.wreath-category-content h3 {
+  margin: 0 0 16px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #221b18;
+}
+
+.wreath-category-content p {
+  margin: 0 0 25px;
+  line-height: 1.7;
+  color: #4f4540;
+}
+
+.wreath-category-content .cta-button {
+  margin-top: auto;
+}
+
+@media (max-width: 800px) {
+  .wreath-categories {
+    padding: 45px 18px 60px;
+  }
+
+  .wreath-category-grid {
+    flex-direction: column;
+    gap: 50px;
+  }
+}

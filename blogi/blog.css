@@ -325,3 +325,146 @@
     transition: none;
   }
 }
+
+/* ==================================================
+   VISUAALNE TRENDIARTIKKEL
+   nt. Lillekimpude sügistrendid Haapsalus 2026
+   ================================================== */
+
+.article-intro {
+  padding: 60px 24px;
+  background: #f5f3ef;
+}
+
+.seo-container {
+  width: min(820px, 100%);
+  margin-inline: auto;
+}
+
+.article-intro h2 {
+  margin: 0 0 20px;
+  color: #26352f;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.article-intro p {
+  margin: 0 0 18px;
+  color: #4b554f;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.article-intro a {
+  color: #26352f;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+/* PILT + TEKST VAHELDUVAD READ */
+
+.hello {
+  padding: 30px 24px 80px;
+  background: #ffffff;
+}
+
+.hello-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(36px, 6vw, 80px);
+  align-items: center;
+
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: clamp(55px, 8vw, 95px) 0;
+
+  border-bottom: 1px solid #e6e1da;
+}
+
+.hello-row:last-child {
+  border-bottom: none;
+}
+
+.hello-reverse .hello-text {
+  order: 2;
+}
+
+.hello-reverse .hello-image {
+  order: 1;
+}
+
+.hello-text h2 {
+  margin: 0 0 22px;
+  color: #26352f;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hello-text p {
+  margin: 0 0 20px;
+  color: #4b554f;
+  font-size: 1.06rem;
+  line-height: 1.8;
+}
+
+.hello-text a {
+  color: #26352f;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.hello-text a:hover {
+  color: #66776c;
+}
+
+.hello-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* MOBIIL */
+
+@media (max-width: 760px) {
+  .article-intro {
+    padding: 45px 20px;
+  }
+
+  .hello {
+    padding: 10px 20px 55px;
+  }
+
+  .hello-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 50px 0;
+  }
+
+  .hello-reverse .hello-text,
+  .hello-reverse .hello-image {
+    order: initial;
+  }
+
+  .hello-text h2 {
+    font-size: clamp(1.75rem, 8vw, 2.4rem);
+  }
+
+  .hello-text p,
+  .article-intro p {
+    font-size: 1rem;
+  }
+}
+
+/* Blogi trendiartiklis näita sisu alati */
+.hello .reveal-left,
+.hello .reveal-right {
+  opacity: 1;
+  transform: none;
+}

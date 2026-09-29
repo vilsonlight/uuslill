@@ -572,7 +572,8 @@
         <textarea id="text" name="lint" rows="3"></textarea>
 
         <label for="date">6. Soovin järgi tulla</label>
-        <input type="date" id="date" name="tarne_kuupaev" />
+        <input type="date" id="date" />
+        <input type="hidden" id="formattedDate" name="tarne_kuupaev" />
 
         <label for="time">7. kell</label>
         <input type="time" id="time" name="jarele_tulemise_aeg" />
@@ -730,6 +731,14 @@
         <script>
           const form = document.querySelector("#orderForm form");
           const message = document.getElementById("formMessage");
+
+          const dateInput = document.getElementById("date");
+          const formattedDate = document.getElementById("formattedDate");
+
+          dateInput.addEventListener("change", function () {
+            const [year, month, day] = dateInput.value.split("-");
+            formattedDate.value = `${day}.${month}.${year}`;
+          });
 
           form.addEventListener("submit", async function (event) {
             event.preventDefault();

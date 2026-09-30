@@ -349,6 +349,17 @@
   font-weight: 500;
   line-height: 1.2;
 }
+.article-intro h3 {
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 32px 0 12px;
+  color: #26352f;
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
 
 .article-intro p {
   margin: 0 0 18px;

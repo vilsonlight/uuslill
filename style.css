@@ -1442,3 +1442,51 @@ details p {
     gap: 50px;
   }
 }
+
+/* HINNAFILTER */
+
+.price-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.price-filter-btn {
+  padding: 12px 22px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.price-filter-btn:hover {
+  background: #f0f0f0;
+}
+
+.price-filter-btn.active {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+@media (max-width: 600px) {
+  .price-filter {
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .price-filter-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
